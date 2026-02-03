@@ -6,6 +6,8 @@ from langchain_experimental.agents.agent_toolkits import create_pandas_dataframe
 import os
 import matplotlib.pyplot as plt
 import httpx
+import io
+import msoffcrypto
 
 # Configura o backend do matplotlib para não travar o Streamlit
 plt.switch_backend('Agg')

@@ -79,20 +79,19 @@ def carregar_sistema_pcm(filepath, password):
     if not os.path.exists(filepath):
         return None, f"Arquivo '{filepath}' não encontrado no diretório."
 
-    try:
-        # Abre o arquivo criptografado
-        with open(filepath, "rb") as f:
-            office_file = msoffcrypto.OfficeFile(f)
-            office_file.load_key(password=password) # Define a senha
+    # Abre o arquivo criptografado
+    with open(filepath, "rb") as f:
+        office_file = msoffcrypto.OfficeFile(f)
+        office_file.load_key(password=password) # Define a senha
 
-            # Descriptografa para memória (buffer)
-            decrypted_file = io.BytesIO()
-            office_file.decrypt(decrypted_file)
+        # Descriptografa para memória (buffer)
+        decrypted_file = io.BytesIO()
+        office_file.decrypt(decrypted_file)
 
-        # Lê o conteúdo descriptografado com pandas
-        # Se sua planilha tiver nome específico, adicione sheet_name='Planilha1' aqui
-        df = pd.read_excel(decrypted_file) 
-        return df, None
+    # Lê o conteúdo descriptografado com pandas
+    # Se sua planilha tiver nome específico, adicione sheet_name='Planilha1' aqui
+    df = pd.read_excel(decrypted_file) 
+    return df, None
 
 # --- CONFIGURAÇÃO DO ARQUIVO LOCAL ---
 ARQUIVO_LOCAL = "dados1.xlsx"

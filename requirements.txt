@@ -1,0 +1,8 @@
+streamlit
+pandas
+openai
+langchain-openai
+langchain-experimental
+tabulate
+openpyxl
+msoffcrypto-tool

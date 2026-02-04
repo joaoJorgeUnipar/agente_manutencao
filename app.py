@@ -182,8 +182,8 @@ with st.sidebar:
 
 st.markdown("""
 <div class="header-container">
-    <h3>Agente de Inteligência PCM</h3>
-    <p>Assistente Virtual para Análise de Manutenção e Backlog</p>
+    <h3>Agente M.A.I.A</h3>
+    <p>Manutenção e Inteligencia artificial</p>
 </div>
 """, unsafe_allow_html=True)
 

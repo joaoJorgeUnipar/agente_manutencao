@@ -18,7 +18,7 @@ plt.switch_backend('Agg')
 OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 
 st.set_page_config(
-    page_title="Unipar | Central Agente Manuntenção (Piloto)",
+    page_title="Unipar | M.A.I.A.",
     page_icon="🏭",
     layout="wide"
 )
@@ -162,7 +162,7 @@ Agora, aguarde a pergunta do usuário e execute o código Python necessário na 
 # 3. BARRA LATERAL (SIMPLIFICADA)
 # =================================================================
 with st.sidebar:
-    st.markdown("### ⚙️ Painel Agente de Manuntenção")
+    st.markdown("### ⚙️ Agente M.A.I.A.")
     
     st.warning("🚧 **PROJETO PILOTO**\n\nAmbiente para coleta de feedbacks. Respostas geradas por IA.")
     st.divider()
@@ -189,7 +189,7 @@ st.markdown("""
 
 if "messages_pcm" not in st.session_state:
     st.session_state.messages_pcm = [
-        {"role": "assistant", "content": "Olá! Sou seu assistente de PCM. Como posso ajudar?"}
+        {"role": "assistant", "content": "Olá! Me chamo MAIA e sou seu assistente pessoal de manutenção. Como posso ajudar?"}
     ]
 
 # Exibe Histórico
